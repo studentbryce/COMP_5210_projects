@@ -1,0 +1,61 @@
+/* Apply the box-sizing property to all elements */
+* {
+    box-sizing: border-box; 
+    /* The box-sizing: border-box; rule ensures that padding and border are included in the element's total width and height.
+       This makes layout calculations more intuitive and consistent. */
+}
+
+/* Style the root html element */
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Sets the font family for the entire document. */
+    font-size: 1rem;
+}
+
+/* Style the body element */
+body {
+    margin-left: auto; /* Centers the body element horizontally */
+    margin-right: auto;
+    padding: 20px;
+}
+
+/*Setup grid columns*/
+.col-1 {width: 8.33%; }
+.col-2 {width: 16.66%; }
+.col-3 {width: 25%; }
+.col-4 {width: 33.33%; }
+.col-5 {width: 41.66%; }
+.col-6 {width: 50%; }
+.col-7 {width: 58.33%; }
+.col-8 {width: 66.66%; }
+.col-9 {width: 75%; }
+.col-10 {width: 83.33%; }
+.col-11 {width: 91.66%; }
+.col-12 {width: 100%; }
+
+/*Rules for inside each column*/
+[class*="col"]
+{
+    float: left;
+    padding: 10px;
+    background-color: #F39403;
+    border-style: dashed;
+    border-color: #834e00;
+}
+
+/*Set row rules - (set row first then columns)*/
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+    margin-bottom: 10px;
+}
+
+/*fluid images*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.imgflip{
+    transform: scale();
+}
